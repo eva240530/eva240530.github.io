@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        a {
-
-            text-decoration: none;
-            color: rgb(253, 254, 254);
-        }
-
         footer {
             width: 100%;
             font-size: 12px;
             background-color: rgb(37, 37, 37);
             color: rgb(253, 254, 254);
+            list-style-type: none;
 
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(253, 254, 254);
         }
 
         footer img {
@@ -28,20 +28,29 @@
         div {
             display: flex;
             width: 100%;
-            text-decoration: none;
-            list-style-type: none;
         }
 
-        .Support {
+        .information ul {
+            list-style-type: none;
+            line-height: 1.8;
+        }
+
+        .outsidelink {
             display: inline;
         }
 
-        .Support ul {
+        .outsidelink ul {
+            list-style-type: none;
             display: flex;
         }
 
-        .Support .sns img {
+        .sns img {
             width: 25px;
+            margin: 10px;
+        }
+
+        .Support li {
+            margin: 10px;
         }
 
         address {
@@ -75,7 +84,7 @@
 
     <footer>
         <img src="./img/logo-white.png" alt="Logo">
-        <div>
+        <div class="information">
 
             <ul>
                 <li style="font-size: 18px;">內容分類</li>
@@ -119,8 +128,8 @@
                 <li><a href="https://www.businessweekly.com.tw/bwevent/2021/exchange/">序號兌換</a></li>
             </ul>
         </div>
-        <div class="Support">
-            <ul>
+        <div class="outsidelink">
+            <ul class="Support">
                 <li><a href="https://www.businessweekly.com.tw/"><img src="./img/logo-white.png" alt="logo"></a></li>
                 <li><a href="https://smart.businessweekly.com.tw/"><img src="./img/smart-white.png" alt="smart"></a>
                 </li>
