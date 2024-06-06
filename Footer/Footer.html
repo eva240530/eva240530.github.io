@@ -14,17 +14,19 @@
 
         footer {
             width: 100%;
-            height: 300px;
+            height: 471px;
             font-size: 12px;
             background-color: rgb(37, 37, 37);
             color: rgb(253, 254, 254);
             position: relative;
+
         }
 
 
         .container {
             margin: auto;
-            width: 75%;
+            width: 1088px;
+            height: 243px;
             display: flex;
             position: absolute;
             height: 80%;
@@ -35,12 +37,12 @@
 
         .Logo {
             position: absolute;
-            left: 5px;
-            top: 5px;
+            left: 0px;
+            top: 20px;
         }
 
         .Logo img {
-            width: 60px;
+            width: 73px;
         }
 
         .v-line {
@@ -65,12 +67,13 @@
 
         .information ul {
             line-height: 2;
-            margin-right: 25px;
-            font-size: 12px;
+            margin-right: 50px;
+            font-size: 15px;
+            font-family: Microsoft JhengHei;
         }
 
         .title {
-            font-size: 16px;
+            font-size: 18px;
             font-weight: bold;
         }
 
@@ -100,30 +103,36 @@
             width: 50px;
         }
 
+        .other a {
+            margin: 10px;
+            color: rgb(253, 254, 254);
+            font-size: 14px;
+            font-family: Microsoft JhengHei;
+        }
+
         address {
 
             display: flex;
             color: gray;
-            font-size: 12px;
+            font-size: 14px;
             font-style: normal;
-            margin: 0px, 20px;
+            margin: 30px;
         }
 
         address a {
             color: gray;
+            margin: 15px;
         }
 
-        address p {
-            margin: 10px
+        .connect {
+            color: rgb(253, 254, 254);
         }
 
-        .other a {
-            margin: 20px;
-        }
+
 
         .copyright {
             position: absolute;
-            bottom: 0%;
+            bottom: 0;
             right: 0;
             left: 0;
             font-size: 11px;
@@ -141,6 +150,7 @@
 <body>
 
     <footer>
+
         <div class="container">
             <div class="Logo">
                 <img src="./img/logo-white.png" alt="Logo">
@@ -222,23 +232,26 @@
                     </li>
                     <li><a href="https://t.me/businessweeklytw"><img src="./img/footer-telegram.svg" alt="Telegram"></a>
                     </li>
+
+
+                    <li class="other"><a href="https://www.businessweekly.com.tw/bwplus/landingpage/">下載APP抽好禮</a>
+                    </li>
+                    <li class="other"><a href="https://www.businessweekly.com.tw/epaper">訂閱電子報</a>
+                    </li>
+
                 </ul>
+
                 <address>
                     <p>客戶服務專線<br />
-                        <a href="tel:+88622510888">(02) 2510-8888</a>
+                        <a class="connect" href="tel:+88622510888">(02) 2510-8888</a>
                     </p>
                     <p>傳真<br />
-                        <a href="fox:+886225036989">(02) 2503-6989</a>
+                        <a class="connect" href="fox:+886225036989">(02) 2503-6989</a>
                     </p>
                     <p>服務時間<br>
-                        週一至週五09:00~18:00 (例假日除外)</p>
+                        <span class="connect">週一至週五09:00~18:00 (例假日除外)</span></s>
                 </address>
-                <ul class="other">
-                    <li><a href="https://www.businessweekly.com.tw/bwplus/landingpage/">下載APP抽好禮</a>
-                    </li>
-                    <li><a href="https://www.businessweekly.com.tw/epaper">訂閱電子報</a>
-                    </li>
-                </ul>
+
             </div>
         </div>
 
