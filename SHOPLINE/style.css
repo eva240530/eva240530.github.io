@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: rgb(16, 39, 82);
+}
+
+.begin {
+  width: 100%;
+  height: 280px;
+  background-color: rgb(247, 248, 249);
+  text-align: center;
+}
+
+.slogan {
+  padding-top: 50px;
+}
+
+.slogan h2 {
+  font-size: 30px;
+}
+
+.slogan p {
+  margin: 25px;
+}
+.card-list {
+  height: auto;
+  margin-top: 20px;
+}
+.card {
+  width: 1202px;
+  height: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.card .picture {
+  width: 510px;
+  height: 440px;
+}
+.card img {
+  width: 90%;
+  height: 90%;
+}
+
+.card .text {
+  width: 510px;
+  height: 378px;
+}
+
+.text h3 {
+  font-size: 28px;
+  padding-top: 30px;
+  margin-bottom: 27px;
+}
+
+.text p {
+  margin-bottom: 24px;
+}
+
+.text ul {
+  height: 150px;
+  margin-left: 1em;
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text li {
+  width: 50%;
+}
+
+.text li::marker {
+  color: rgb(40, 95, 246);
+  font-size: 22px;
+}
+
+.text a {
+  text-decoration: none;
+}
+
+.text span {
+  color: rgb(64, 113, 247);
+  padding-bottom: 2px;
+  border-bottom: 2px solid rgb(64, 113, 247);
+}
+
+.text .fa-arrow-right {
+  color: rgb(64, 113, 247);
+  margin: 0.3em;
+  transition: all 0.3s 0s ease;
+}
+
+a:hover .fa-arrow-right {
+  margin-left: 0.5em;
+}
+
+.moreservice {
+  height: 755px;
+  text-align: center;
+  background-color: rgb(247, 248, 249);
+  position: relative;
+}
+
+.moreservice h3 {
+  width: 100%;
+  font-size: 28px;
+  padding-top: 50px;
+  margin-bottom: 50px;
+}
+
+.service-list {
+  width: 1172px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.service-list .list {
+  width: 335px;
+  /* height: 228px; */
+  height: auto;
+  margin-bottom: 5em;
+}
+
+.service-list .list img {
+  border-radius: 100px;
+  height: 96px;
+  width: 96px;
+}
+
+.service-list .list h4 {
+  font-size: 20px;
+  margin-bottom: 24px;
+}
+
+.card-list .card:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 1200px) {
+  .card,
+  .card .picture,
+  .service-list,
+  .service-list .list,
+  .begin,
+  .moreservice,
+  .moreservice .card .text {
+    width: auto;
+    height: auto;
+    margin: auto;
+  }
+
+  .slogan {
+    padding-top: 20px;
+    height: 200px;
+  }
+
+  .text {
+    margin: auto;
+  }
+  .text h3 {
+    padding-top: 15px;
+    margin-bottom: 13px;
+  }
+
+  .text ul {
+    margin-bottom: 10px;
+    margin-left: 1em;
+  }
+  .text li {
+    margin-left: 1em;
+  }
+
+  .service-list .list {
+    margin-bottom: 3em;
+  }
+}
