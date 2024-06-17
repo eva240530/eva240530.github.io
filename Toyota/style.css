@@ -1,0 +1,261 @@
+@font-face {
+  font-family: "ZenKakuGothicNew-Light";
+  src: url(/Toyota/font/ZenKakuGothicNew-Light.ttf);
+}
+@font-face {
+  font-family: "NotoSansTC-Black";
+  src: url(/Toyota/font/NotoSansTC-Black.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.card-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 960px;
+  margin-top: 250px;
+  position: relative;
+}
+
+.blank {
+  background-color: rgb(245, 245, 245);
+  position: absolute;
+}
+
+.card:nth-child(odd) .blank {
+  width: 450px;
+  height: 300px;
+  right: 0;
+  top: -110px;
+}
+
+.card:nth-child(even) .blank {
+  width: 510px;
+  height: 400px;
+  top: -70px;
+  right: 160px;
+}
+
+.major-content {
+  width: 350px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  z-index: 1;
+  top: -119.5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:nth-child(even) .major-content {
+  right: 0;
+}
+
+h2 {
+  width: 100%;
+  font-size: 55px;
+  height: 120px;
+  background-color: rgb(171, 36, 24);
+  font-weight: lighter;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card h2 span {
+  width: fit-content;
+  height: fit-content;
+  font-family: "ZenKakuGothicNew-Light";
+  display: inline-block;
+  transform: rotate(90deg);
+  font-size: 120px;
+  position: relative;
+}
+
+.card:nth-child(odd) h2 span {
+  left: -13px;
+}
+
+.card:nth-child(even) h2 span {
+  order: 2;
+  right: -33px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+article {
+  font-size: 18px;
+  padding: 20px;
+  line-height: 2;
+}
+
+.picture {
+  width: 700px;
+  position: relative;
+}
+
+.cover {
+  width: 100%;
+  position: relative;
+}
+
+.card:nth-child(odd) .cover {
+  left: 173px;
+}
+
+/* .YTlogo {
+  width: 50px;
+  position: absolute;
+} */
+
+.card:nth-child(odd) .YTlogo {
+  top: 200px;
+  right: -180px;
+}
+
+.card:nth-child(even) .YTlogo {
+  top: 200px;
+  left: -10px;
+}
+
+.descript-content {
+  display: block;
+  width: 660px;
+  background-color: rgb(245, 245, 245);
+  line-height: 2;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.card:nth-child(odd) .descript-content {
+  top: -30px;
+  left: 50px;
+}
+
+.card:nth-child(even) .descript-content {
+  top: -30px;
+  left: 200px;
+}
+
+.descript-content span {
+  font-size: 20px;
+  color: #c30;
+  font-family: "NotoSansTC-Black";
+  font-weight: bolder;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.descript-content span::after {
+  content: "";
+  border-bottom: 2px solid rgb(171, 36, 24);
+  flex: 1;
+  margin: auto;
+}
+
+dl {
+  font-size: 15px;
+}
+
+dt {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+  padding: 0 7px;
+}
+
+dd {
+  display: list-item;
+  list-style-type: square;
+  margin-left: 1.5em;
+}
+
+dd::marker {
+  color: rgb(171, 36, 24);
+}
+
+.YTlogo {
+  width: 56px;
+  height: 36px;
+  background-color: #c30;
+  position: absolute;
+}
+
+.trangle {
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  clip-path: polygon(0px 0px, 0px 20px, 20px 10px);
+  position: relative;
+  top: 8.5px;
+  left: 21px;
+}
+@media screen and (max-width: 960px) {
+  .card-list,
+  .card {
+    width: auto;
+    height: auto;
+    margin-top: 350px;
+  }
+
+  .major-content {
+    width: 500px;
+    height: fit-content;
+    left: -50px;
+    top: -280px;
+    z-index: 1;
+  }
+
+  .picture {
+    width: 550px;
+  }
+
+  .card:nth-child(odd) .cover {
+    left: 0;
+  }
+  .card:nth-child(odd) .YTlogo {
+    top: 150px;
+    right: -10px;
+  }
+
+  .descript-content {
+    width: 510px;
+    position: static;
+  }
+
+  .card:nth-child(even) .YTlogo {
+    top: 150px;
+  }
+
+  .card:nth-child(odd) .blank {
+    right: 30px;
+    top: -110px;
+  }
+
+  .card:nth-child(even) .blank {
+    top: -110px;
+    right: 30px;
+  }
+
+  .card:nth-child(odd) h2 span {
+    left: -87.5px;
+  }
+
+  .card:nth-child(even) h2 span {
+    order: 0;
+    left: -87.5px;
+  }
+}

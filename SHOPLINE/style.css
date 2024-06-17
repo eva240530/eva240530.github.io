@@ -101,7 +101,6 @@ a:hover .fa-arrow-right {
   height: 755px;
   text-align: center;
   background-color: rgb(247, 248, 249);
-  position: relative;
 }
 
 .moreservice h3 {
@@ -163,7 +162,7 @@ a:hover .fa-arrow-right {
   }
   .text h3 {
     padding-top: 15px;
-    margin-bottom: 13px;
+    margin-bottom: 12px;
   }
 
   .text ul {
