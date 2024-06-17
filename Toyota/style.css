@@ -114,11 +114,6 @@ article {
   left: 173px;
 }
 
-/* .YTlogo {
-  width: 50px;
-  position: absolute;
-} */
-
 .card:nth-child(odd) .YTlogo {
   top: 200px;
   right: -180px;
@@ -151,7 +146,6 @@ article {
 .descript-content span {
   font-size: 20px;
   color: #c30;
-  font-family: "NotoSansTC-Black";
   font-weight: bolder;
   display: flex;
   flex-direction: row;
@@ -160,7 +154,7 @@ article {
 
 .descript-content span::after {
   content: "";
-  border-bottom: 2px solid rgb(171, 36, 24);
+  border-bottom: 2px solid #c30;
   flex: 1;
   margin: auto;
 }
