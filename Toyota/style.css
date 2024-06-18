@@ -62,7 +62,7 @@
 h2 {
   width: 100%;
   font-size: 55px;
-  height: 120px;
+  line-height: 1;
   background-color: rgb(171, 36, 24);
   font-weight: lighter;
   display: flex;
@@ -134,12 +134,12 @@ article {
 }
 
 .card:nth-child(odd) .descript-content {
-  top: -30px;
+  top: -35px;
   left: 50px;
 }
 
 .card:nth-child(even) .descript-content {
-  top: -30px;
+  top: -35px;
   left: 200px;
 }
 
@@ -172,6 +172,7 @@ dt {
 }
 
 dd {
+  color: rgb(100, 100, 100);
   display: list-item;
   list-style-type: square;
   margin-left: 1.5em;
