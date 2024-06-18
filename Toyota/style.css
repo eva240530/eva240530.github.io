@@ -134,7 +134,7 @@ article {
 }
 
 .card:nth-child(odd) .descript-content {
-  top: -30px;
+  top: -35px;
   left: 50px;
 }
 
