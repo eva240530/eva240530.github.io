@@ -151,7 +151,7 @@ img {
 }
 
 .card_txt ul li {
-  width: 50%;
+
   font-size: 14px;
   margin-left: 1em;
 }
@@ -269,9 +269,8 @@ a:hover .fa-arrow-right {
   }
 
   .card_txt ul {
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template:repeat(3,1fr)/repeat(2, 1fr) ;
   }
   .list {
     margin: 20px 0;
@@ -324,7 +323,7 @@ a:hover .fa-arrow-right {
     background-color: #ebf1f8;
   }
   .page_head {
-    position: sticky;
+    position: static;
     background-image: none;
     padding: 50px 35px 15px;
   }
