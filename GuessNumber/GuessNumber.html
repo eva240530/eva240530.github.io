@@ -1,21 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-     <style>
-        form {
-            width: 200px;
-            border: 1px solid red;
+    <link rel="stylesheet" href="./grid_SizeModel.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
         }
-     </style>
+
+        body {
+            width: 100%;
+            background-image: url(./img/background_in_space.webp);
+            background-repeat: repeat;
+            color: white;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .container {
+            margin-top: 200px;
+            display: grid;
+            grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+            gap: 20px
+        }
+
+        h1 {
+            grid-column: 1/4;
+        }
+
+        form {
+            grid-area: 2/2/3/3;
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+
+        .btn_group {
+            grid-area: 3/2/3/3;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+    </style>
 </head>
+
 <body>
-    <form action="">
-        
-        <label for="">請輸入一組1~100的數字：</label><br>
-        <input type="number">
-    </form>
+    <div class="container">
+        <h1> 歡迎來到 終極密碼 的遊戲 </h1>
+        <form>
+            <label class="text_result"></label><br>
+            <input class="input_num" type="text">
+        </form>
+        <div class="btn_group">
+            <button class="btn enter">Enter</button>
+            <button class="btn reset">Reset</button>
+            <button class="btn answer">Answer</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        let answer, minNum, maxNum
+        const enter_btn = document.querySelector(".enter");
+        const reset_btn = document.querySelector(".reset");
+        const answer_btn = document.querySelector(".answer");
+        const input_num = document.querySelector(".input_num");
+        const text_result = document.querySelector(".text_result");
+
+        game_start();
+        reset_btn.addEventListener("click", game_start);
+        enter_btn.addEventListener("click", guess_number);
+        answer_btn.addEventListener("click", return_ans);
+        console.log(answer);
+      
+
+        function game_start() {
+            answer = Math.round(Math.random() * 100);
+            minNum = 1;
+            maxNum = 100;
+            text_result.textContent = `請輸入${minNum}~${maxNum}的數字`;
+            input_num.value = "";
+            input_num.disabled = false;
+            answer_btn.disabled = false;
+            enter_btn.disabled = false;
+        }
+
+        function return_ans() {
+            text_result.textContent = `唉呀呀~怎麼不猜了呢!\n答案是${answer}唷!!`;
+            input_num.disabled = true;
+            answer_btn.disabled = true;
+            enter_btn.disabled = true;
+        }
+
+        function guess_number() {
+            const input_value= parseInt(input_num.value);
+
+            //不得為空值
+            if (input_num.value === "") {
+                text_result.innerText = `未輸入數字!!\n請重新輸入${minNum}~ ${maxNum}之間的整數`;
+            }
+
+            //確認是否為整數
+            else if (isNaN(input_value)) {
+                text_result.innerText = `輸入錯誤!!\n請重新輸入${minNum}~ ${maxNum}之間的整數`;
+                input_num.value = "";  
+            }
+
+            //範圍外數字
+            else if (input_value <minNum || input_value > maxNum) {
+                text_result.innerText = `超出範圍!!\n請重新輸入${minNum}~ ${maxNum}之間的整數`;
+                input_num.value = "";
+            }
+            else {
+                if (input_value > answer) {
+                    maxNum = input_value;
+                    text_result.innerText = `答錯了!!\n請重新輸入${minNum}~${maxNum}之間的整數`;
+                    input_num.value = "";
+                }
+                else if (input_value < answer) {
+                    minNum = input_value;
+                    text_result.innerText = `答錯了!!\n請重新輸入${minNum}~${maxNum}之間的整數`;
+                    input_num.value = "";
+                }
+                else {
+                    text_result.innerText = "恭喜~恭喜~恭喜~";
+                    input_num.disabled = true;
+                    answer_btn.disabled = true;
+                    enter_btn.disabled = true;
+                    alert(`恭喜你~答對了!!答案就是${input_value}`);
+                }
+            }
+        }
+
+    </script>
 </body>
+
 </html>
