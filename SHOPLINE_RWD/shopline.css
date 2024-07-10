@@ -104,8 +104,8 @@ img {
 
 .main_pic img {
   background: url(./img/original2.png) no-repeat center / 300% 100%;
-  border-top-left-radius: 100%;
-  border-top-right-radius: 100%;
+  border-top-left-radius: 48%;
+  border-top-right-radius: 48%;
 }
 
 .slg_cov {
