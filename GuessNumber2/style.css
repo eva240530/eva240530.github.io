@@ -1,0 +1,328 @@
+@font-face {
+  font-family: "Graffiti";
+  src: url(./font/Graffiti.ttf);
+}
+
+@font-face {
+  font-family: "W4";
+  src: url(./font/W4.ttc);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Graffiti", sans-serif;
+  color: #008fcc;
+  cursor: crosshair;
+}
+body {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 750px;
+  height: 550px;
+  margin-top: 40px;
+  text-align: center;
+  background-image: url(./img/bubble.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*btn 共同樣式*/
+.btn {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  min-width: 100px;
+  background: #ffffff;
+  border: 2px solid #9cdefb;
+  border-radius: 4px;
+  color: #9cdefb;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.5s;
+  padding: 10px 20px;
+}
+.btn span {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: #9cdefb;
+  transform: translateY(150%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
+}
+.btn:hover,
+.btn:focus {
+  color: #ffffff;
+}
+.btn:hover span {
+  transform: translateY(0) scale(2);
+}
+.btn span:nth-child(1) {
+  --n: 1;
+}
+.btn span:nth-child(2) {
+  --n: 2;
+}
+.btn span:nth-child(3) {
+  --n: 3;
+}
+.btn span:nth-child(4) {
+  --n: 4;
+}
+
+::placeholder {
+  font-size: 15px;
+  text-align: center;
+  color: #ceeefc;
+}
+
+/*遊戲首頁*/
+.game_first_page {
+  width: 85%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.game_first_page h1 {
+  text-shadow: 0 0 20px #fee104;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+
+.mode_discription {
+  margin-top: 25px;
+  text-align: left;
+  position: absolute;
+  bottom: 120px;
+}
+/*2.選擇模式*/
+.game_mode {
+  display: none;
+}
+.game_text {
+  margin-bottom: 10px;
+}
+
+#one-player {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #008fcc;
+  font-size: 18px;
+  text-align: center;
+}
+
+.player_name_group > p {
+  color: rgb(248, 116, 127);
+  font-size: 12px;
+}
+
+.start_btn,
+.playername,
+.player_name_group p {
+  margin-top: 8px;
+}
+
+/*遊戲畫面*/
+.game_start_page {
+  width: 85%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 50px;
+  animation-name: transform-gamestart;
+  animation-duration: 2s;
+  animation-timing-function: linear; /* 影片加速速率 */
+  display: none;
+}
+
+.game_start_page h2 {
+  margin-bottom: 20px;
+}
+.game_start_main {
+  width: 100%;
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  justify-content: center;
+}
+
+.main{
+  position: relative;
+}
+
+.answer_tip{
+  position: absolute;
+  left: 15px;
+  bottom: -10px;
+}
+
+
+.player_name_put {
+  color: #ffe100;
+  font-family: "W4", sans-serif;
+  font-size: 34px;
+}
+
+.main p:last-child {
+  color: rgb(248, 116, 127);
+  font-size: 12px;
+}
+
+.player_answer {
+  font-size: 28px;
+  width: 90%;
+  outline: none;
+  border: 1px dashed #008fcc;
+  margin: 15px auto;
+  text-align: center;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  align-items: center;
+  margin-top: -10px;
+}
+
+.enter_btn {
+  height: 50px;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.answer_btn,
+.giveup_btn,
+.back_btn {
+  width: 130px;
+}
+
+@keyframes transform-gamestart {
+  /* 定義每個階段的影格變化及定義 */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*遊戲結束狀態*/
+
+.game_state_note {
+  position: absolute;
+  width: 300px;
+  aspect-ratio: 1/1;
+  background-color: #ffffff;
+  border: 1px dotted #008fcc;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 10px;
+  border-radius: 5%;
+  z-index: 1;
+  animation-name: transform-note; /* 套用的 keyframe */
+  animation-duration: 2s; /* 動畫持續時間 */
+  animation-timing-function: linear; /* 影片加速速率 */
+}
+
+.note_dis {
+  flex-grow: 1;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 5px;
+  justify-content: center;
+  line-height: 2;
+}
+.again_btn,
+.close_btn {
+  width: 120px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.correct_answer {
+  color: #ffe100;
+  font-family: "W4", sans-serif;
+  font-size: 30px;
+}
+
+.card {
+  font-weight: lighter;
+}
+
+.close_btn {
+  display: none;
+}
+
+@keyframes transform-note {
+  /* 定義每個階段的影格變化及定義 */
+  from {
+    width: 180px;
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    width: 300px;
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+/*計時器*/
+
+.bar-con {
+  position: relative;
+  text-align: center;
+  width: 90px;
+  height: 14px;
+  border: 1px dashed #008fcc;
+  display: inline-block;
+}
+
+.timer_count{
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  line-height: 14px;
+  color: #c0f5ec;
+  z-index: 1;
+  font-size: 12px;
+}
+
+.bar {
+  display: inline-block;
+  position: absolute;
+  width: 90px;
+  height: 14px;
+  background-color: #008fcc;
+  left: 0;
+  top: 0;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>終極密碼</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="game_first_page">
+            <h1>終極密碼</h1>
+            <div class="game_mode">
+                <p class="game_text">請選擇遊戲模式</p>
+                <button class="btn easy_game">簡單
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <button class="btn nomarl_game">普通
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <button class="btn difficult_game">困難
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+            <div class="mode_discription">
+            </div>
+            <div class="player_name_group">
+                <label for="one-player">PLAYER NAME：
+                </label>
+                <input type="text" id="one-player" placeholder="請輸入遊戲名稱"><br>
+                <p class="name_result"></p><br>
+                <button class="btn start_btn"> 確認
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <div class="game_start_page">
+            <h2>Hi <span class="player_name_put"></span> 歡迎來到終極密碼遊戲</h2>
+            <div class="game_start_main">
+                <div class="main">
+                    <p class="main_taxt">請輸入1~100的數字</p>
+                    <input type="text" class="player_answer" placeholder="請輸入數字">
+                    <p class="answer_tip"></p>
+                </div>
+                <div class="other">
+                    <p class="remaind">剩餘次數：<span class="remaind-count">★★★★</span></p><br>
+                    <p class="timer">
+                        時間：
+                        <span class="bar-con">
+                            <span class="bar"></span>
+                            <span class="timer_count"></span>
+                        </span>
+                    </p>
+
+                </div>
+                <button class="btn enter_btn">就決定是它了!
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="btn-group">
+                    <button class="btn answer_btn">看答案
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <button class="btn giveup_btn">放棄遊戲
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <button class="btn back_btn">返回
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="game_state_note">
+            <div class="note_dis">
+                <p class="card"></p>
+                <p>正確答案是：【 <span class="correct_answer"></span> 】</p>
+            </div>
+            <div class="btn-gr">
+                <button class="btn again_btn">再來一次
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <button class="btn close_btn">關閉
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+        </div>
+
+
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
