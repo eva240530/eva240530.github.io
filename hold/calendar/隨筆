@@ -1,0 +1,60 @@
+<div Class="modal fade" id="todolistCard" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true" style="color:#000">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-2 fw-bolder row " id="staticBackdropLabel">
+                    <input type="text" id="input-event" style="color:${
+                          EventList.color
+                        } ; border:none" value="${EventList.EventName}">
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body fs-5">
+                <form>
+                    <div class="row mb-3">
+                        <label for="input-date" class="col-sm-3 col-form-label ">日期</label>
+                        <div class="col-sm-9">
+                            <input type="date" class="form-control" id="input-date" style="border:none"
+                                value=${dateFormat( EventDate )}>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="input-time" class="col-sm-3 col-form-label">時間</label>
+                        <div class="col-sm-9 my-auto">
+                            <input type="text" class="form-control" id="input-event" style="border:none" value="${
+                                  EventList.time
+                                }">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="input-local" class="col-sm-3 col-form-label">地點</label>
+                        <div class="col-sm-9 my-auto">
+                            <input type="text" class="form-control" id="input-local" style="border:none " value="${
+                                  EventList.local
+                                }">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="ColorInput" class="col-sm-3 col-form-label">顏色</label>
+                        <div class="col-sm-9"><input type="color" class="form-control form-control-color"
+                                id="ColorInput" value="${
+                                      EventList.color
+                                    }"></div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="cancel-btn btn btn-danger " id="${
+                      EventList.id
+                    }">刪除</button>
+                <button type="button" class="${
+                      EventList.id
+                    } ${EventDate} cancel-btn btn btn-success ">更新</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+staticBackdrop
