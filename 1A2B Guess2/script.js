@@ -103,7 +103,7 @@ function sendAnser() {
   }
 
   if (a === 4) {
-    showAnswerToast(`恭喜答對\n答案就是${inputAnser}`);
+    showAnswerToast(`恭喜答對，答案是${inputAnser}!`);
   }
   appendHistory(a, b,` ${inputAnser}`);
   Clearinput();
