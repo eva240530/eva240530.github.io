@@ -152,25 +152,25 @@ function updateDays() {
 // </template>
 
 //判斷目標日期的事件是否為空，空則清除
-const theEventIndex = EventList.findIndex((item) => item.id === date);
-const EventCount = EventList[theEventIndex].toDoList.length;
-console.log(theEventIndex);
-console.log(EventCount);
-if (EventCount <= 0) {
-  EventList.splice(theEventIndex, 1);
-}
-console.log(EventList);
+// const theEventIndex = EventList.findIndex((item) => item.id === date);
+// const EventCount = EventList[theEventIndex].toDoList.length;
+// console.log(theEventIndex);
+// console.log(EventCount);
+// if (EventCount <= 0) {
+//   EventList.splice(theEventIndex, 1);
+// }
+// console.log(EventList);
 
 
 
 
-  const theEventIndex = EventList.findIndex((item) => item.id === date);
-  const EventCount = EventList[theEventIndex].toDoList.length;
-  console.log(theEventIndex);
-  console.log(EventCount);
-  if (EventCount <= 0) {
-    EventList.splice(theEventIndex, 1);
-    const ulEl = document.getElementById(`ul${EventList[theEventIndex].id}`);
-    ulEl.remove();
-  }
-  console.log(EventList);
+//   const theEventIndex = EventList.findIndex((item) => item.id === date);
+//   const EventCount = EventList[theEventIndex].toDoList.length;
+//   console.log(theEventIndex);
+//   console.log(EventCount);
+//   if (EventCount <= 0) {
+//     EventList.splice(theEventIndex, 1);
+//     const ulEl = document.getElementById(`ul${EventList[theEventIndex].id}`);
+//     ulEl.remove();
+//   }
+//   console.log(EventList);
